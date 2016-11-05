@@ -1,0 +1,26 @@
+{
+	"short_name": "SupDoc",
+	"name": "SupDoc",
+	"background_color": "#2196F3",
+	"theme_color": "#2196F3",
+	"display": "standalone",
+	"start_url": "index.htm?launcher=true",
+
+	"icons": [{
+	    "src": "icons/apple.jpg",
+	    "type": "image/jpg",
+	    "sizes": "48x48"
+	  }, {
+	    "src": "icons/apple2.jpg",
+	    "type": "image/jpg",
+	    "sizes": "74x74"
+	  }, {
+	    "src": "icons/apple3.jpg",
+	    "type": "image/jpg",
+	    "sizes": "100x100"
+	}],
+
+	"//": "Some browsers will use this to enable push notifications.",
+	"//": "It is the same for all projects, this is not your project's sender ID",
+	"gcm_sender_id": "103953800507"
+}
