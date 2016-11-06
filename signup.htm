@@ -1,4 +1,4 @@
-<h2 class="text">Sign Up</h2>
+<h2 class="text center-align">Sign Up</h2>
 <div class="row">
   <form class="col s12">
     <div class="row">
@@ -19,8 +19,8 @@
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
+        <input id="confirm password" type="password" class="validate">
+        <label for="password">Confirm Password</label>
       </div>
     </div>
     <div class="row">
@@ -30,9 +30,12 @@
       </div>
     </div>
     <div class="row">
-      <div class=".center-align">
-        <a class="waves-effect waves-light btn col s4">Confirm</a>
-        <a class="waves-effect waves-light btn col s4">Sign In</a>
+      <a class='dropdown-button col s4 btn right-align green right' id="selected_doctor" data-activates='dropdown1'>Choose Doctor</a>
+    </div>
+    <div class="row">
+      <div class="center-align">
+        <a ng-click="firebase.auth().createUserWithEmailAndPassword()"class="waves-effect waves-light btn col s4 right">Confirm</a>
+        <a class="waves-effect waves-light btn col s4 right pull-s1">Sign In</a>
       </div>
     </div>
   </form>

@@ -1,3 +1,30 @@
+var login = angular.module('login', ['ngRoute']);
+
+login.config(['$locationProvider', '$routeProvider',
+    function config($locationProvider, $routeProvider) {
+        $routeProvider.when('/', {
+            templateUrl : 'signup.htm'
+        }).when('/signin', {
+            templateUrl : 'signin.htm'
+        }).otherwise('/');
+    }
+]);
+
+login.component('signup', {
+    templateUrl: 'signup.htm',
+    controller: function SignUpController($http, $location, $routeParams) {
+
+    }
+});
+
+login.component('signin', {
+    templateUrl: 'signin.htm',
+    controller: function SignInController() {
+
+    }
+});
+
+
 firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
