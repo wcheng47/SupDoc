@@ -1,5 +1,4 @@
 var supdoc = angular.module('supdoc', ['ngRoute']);
-var database = firebase.database();
 
 supdoc.config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
