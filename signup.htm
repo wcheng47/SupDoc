@@ -34,10 +34,17 @@
     </div>
     <div class="row">
       <div class="center-align">
-        <a ng-click="createUser()"class="waves-effect waves-light btn col s4 right">Confirm</a>
+        <a id="confirm_button"onclick="func()"ng-click="createUser()"class="waves-effect waves-light btn col s4 right">Confirm</a>
+        <script>
+        function func() {
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+          var firstname = document.getElementById('first_name').value;
+          var lastname = document.getElementById('last_name').value;
+          var doc = document.getElementById('selected_doctor').value;
+        }
+        </script>
         <a href="#signin" class="waves-effect waves-light btn col s4 right pull-s1">Sign In</a>
-        <a ng-click="createUser()"class="waves-effect waves-light btn col s4 right">Confirm</a>
-        <a class="waves-effect waves-light btn col s4 right pull-s1">Sign In</a>
       </div>
     </div>
   </form>

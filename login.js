@@ -1,10 +1,4 @@
 var login = angular.module('login', ['ngRoute']);
-var bla = $('#txt_name').val();
-var email = document.getElementById('email').value;
-var password = document.getElementById('password').value;
-var firstname = document.getElementById('first_name').value;
-var lastname = document.getElementById('last_name').value;
-var doc = document.getElementById('selected_doctor').value;
 
 login.config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
