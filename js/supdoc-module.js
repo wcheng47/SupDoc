@@ -1,5 +1,3 @@
-
-
 var supdoc = angular.module('supdoc', ['ngRoute']);
 var database = firebase.database();
 
@@ -28,3 +26,5 @@ supdoc.component('doctor', {
     //needs to have a list of patients
     //be able to add patients
 });
+
+$(".button-collapse").sideNav();
