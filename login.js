@@ -1,0 +1,49 @@
+firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  if (errorCode === 'auth/wrong-password') {
+    alert('Wrong password. Please try again.');
+  } else if (errorCode === 'auth/user-not-found') {
+  	alert('No user matching that email address.');
+  } else {
+    alert(errorMessage);
+  }
+  console.log(error);
+});
+
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  if (errorCode === 'auth/email-already-in-use') {
+    alert('You may already have an account, please follow the "forgot my passwork" link.');
+  } else if (errorCode === 'auth/invalid-email') {
+  	alert('Invalid email address.');
+  } else {
+    alert(errorMessage);
+  }
+  console.log(error);
+});
+
+ref.onAuth(function(authData) {
+  if (authData && isNewUser) {
+    // save the user's profile into the database so we can list users,
+    // use them in Security and Firebase Rules, and show profiles
+	  firebase.database().ref('users/' + userId).set({
+	    firstname: first_name,
+	    lastname: last_name,
+	    emailaddress: email,
+	    doctor: selected_doctor
+	  });
+  }
+});
+
+// function writeUserData(userId, firstName, lastName, email, doc) {
+//   firebase.database().ref('users/' + userId).set({
+//     firstname: firstName,
+//     lastname: lastName,
+//     email: email,
+//     doctor: doc
+//   });
+// }
