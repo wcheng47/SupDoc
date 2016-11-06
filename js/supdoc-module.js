@@ -1,15 +1,17 @@
+
+
 var supdoc = angular.module('supdoc', ['ngRoute']);
 var database = firebase.database();
 
 supdoc.config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
         $routeProvider.when('/', {
-            templateUrl : 'user.htm'.
+            templateUrl : 'user.htm'
         }).otherwise('/');
     }
 ]);
 
-supdoc.component('user' {
+supdoc.component('user', {
     templateUrl: 'user.htm',
     controller: function UserController($http, $location, $routeParams) {
         //needs to know PCP
@@ -18,9 +20,11 @@ supdoc.component('user' {
     }
 });
 
-supdoc.component('doctor' {
+supdoc.component('doctor', {
     templateUrl: 'doctor.htm',
-    controller: function DoctorController()
+    controller: function DoctorController() {
+
+    }
     //needs to have a list of patients
     //be able to add patients
 });
